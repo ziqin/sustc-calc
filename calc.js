@@ -31,10 +31,11 @@ function CalcViewModel() {
     self.finalScore = ko.computed(function () {
         var s2t = Number(self.pol()) + Number(self.his()) + Number(self.geo());
 
-        return Number(self.ncee()) * 60 / 750 +
+        var result= Number(self.ncee()) * 60 / 750 +
                Number(self.cbt()) * 25 / 100 +
                Number(self.inv()) +
                s2t / 7.5;
+        return result.toFixed(2);
     }, self);
 }
 
