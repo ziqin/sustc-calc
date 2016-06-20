@@ -24,16 +24,16 @@
             <div class="page-content">
                 <h5>本工具处于最后优化阶段，感谢参与测试</h5>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="number" id="ncee" data-bind="value: ncee" />
-                    <label class="mdl-textfield__label" for="ncee">高考分数</label>
+                    <input class="mdl-textfield__input" type="text" id="ncee" data-bind="textInput: ncee" pattern="\d|[1-9]\d|[1-6]\d\d|7[0-4]\d|750|\d\.\d{0,}|[1-9]\d\.\d{0,}|[1-6]\d\d\.\d{0,}|7[0-4]\d\.\d{0,}|750.0{0,}" />
+                    <label class="mdl-textfield__label" for="ncee">高考分数 <small>（750分制）</small></label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="number" id="cbt" data-bind="value: cbt" />
-                    <label class="mdl-textfield__label" for="cbt">机考分数</label>
+                    <input class="mdl-textfield__input" type="text" id="cbt" data-bind="textInput: cbt" pattern="\d|[1-9]\d|100" />
+                    <label class="mdl-textfield__label" for="cbt">机考分数 <small>（100分制）</small></label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="number" id="inv" data-bind="value: inv" />
-                    <label class="mdl-textfield__label" for="inv">面试分数</label>
+                    <input class="mdl-textfield__input" type="text" id="inv" data-bind="textInput: inv" pattern="[0-5]|5.0{0,}|[0-4]\.\d{0,}" />
+                    <label class="mdl-textfield__label" for="inv">面试分数 <small>（5分制）</small></label>
                 </div>
                 <div>
                     <h4>学业水平测试</h4>
