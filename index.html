@@ -16,24 +16,25 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row" style="padding-left:18px">
-                <!-- Title -->
                 <span class="mdl-layout-title">南方科技大学 2016 能测分数转换器</span>
             </div>
         </header>
         <main class="mdl-layout__content" style="padding:13px">
             <div class="page-content">
-                <h5>本工具处于最后优化阶段，感谢参与测试</h5>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="ncee" data-bind="textInput: ncee" pattern="\d|[1-9]\d|[1-6]\d\d|7[0-4]\d|750|\d\.\d{0,}|[1-9]\d\.\d{0,}|[1-6]\d\d\.\d{0,}|7[0-4]\d\.\d{0,}|750.0{0,}" />
-                    <label class="mdl-textfield__label" for="ncee">高考分数 <small>（750分制）</small></label>
+                    <input class="mdl-textfield__input" type="number" id="ncee" data-bind="textInput: ncee" max="750" min="=0" />
+                    <label class="mdl-textfield__label" for="ncee">高考分数（满分750）</label>
+                    <span class="mdl-textfield__error">请输入正确的高考分数</span>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="cbt" data-bind="textInput: cbt" pattern="\d|[1-9]\d|100" />
-                    <label class="mdl-textfield__label" for="cbt">机考分数 <small>（100分制）</small></label>
+                    <input class="mdl-textfield__input" type="number" id="cbt" data-bind="textInput: cbt" max="100" min="0" />
+                    <label class="mdl-textfield__label" for="cbt">机考分数（满分100）</label>
+                    <span class="mdl-textfield__error">请输入正确的机考分数</span>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="inv" data-bind="textInput: inv" pattern="[0-5]|5.0{0,}|[0-4]\.\d{0,}" />
-                    <label class="mdl-textfield__label" for="inv">面试分数 <small>（5分制）</small></label>
+                    <input class="mdl-textfield__input" type="text" id="inv" data-bind="textInput: inv" pattern="[0-5]|[0-4]\.\d{0,}|5\.0{0,}" />
+                    <label class="mdl-textfield__label" for="inv">面试分数（满分5）</label>
+                    <span class="mdl-textfield__error">请输入正确的面试分数</span>
                 </div>
                 <div>
                     <h4>学业水平测试</h4>
@@ -103,7 +104,8 @@
                         </div>
                     </div>
                 </div>
-                <h3 data-bind="visible: available">您的最终分数是: <span data-bind="text: finalScore"></span></h3>
+                <h3 data-bind="visible: isFinished()">您的最终分数是: <span data-bind="text: finalScore"></span></h3>
+                <h3 data-bind="visible: !isFinished()">请输入您的成绩</h3>
             </div>
         </main>
     </div>

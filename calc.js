@@ -1,4 +1,3 @@
-
 function CalcViewModel() {
     var self = this;
 
@@ -11,8 +10,7 @@ function CalcViewModel() {
     self.his = ko.observable(25);
     self.geo = ko.observable(25);
 
-    self.available = ko.observable(false);
-
+    //behaviors
     self.setPol = function (score) {
         self.pol(score);
     };
@@ -33,11 +31,19 @@ function CalcViewModel() {
                Number(self.cbt()) * 25 / 100 +
                Number(self.inv()) +
                s2t / 7.5;
-
-        self.available(!isNaN(result));
-
         return result.toFixed(2);
     }, self);
+
+    self.isFinished = ko.computed(function () {
+        var ncee = Number(self.ncee());
+        var cbt = Number(self.cbt());
+        var inv = Number(self.inv());
+
+        var isNceeVaild = ncee <= 750 && ncee >= 0 && self.ncee() != "";
+        var isCbtVaild = cbt <= 100 && cbt >= 0 && self.cbt() != "";
+        var isInvVaild = inv <= 750 && inv >= 0 && self.inv() != "";
+        return isNceeVaild && isCbtVaild && isInvVaild;
+    }, this);
 }
 
 ko.applyBindings(new CalcViewModel());
