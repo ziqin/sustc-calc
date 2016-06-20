@@ -28,28 +28,28 @@
         <div>
             <label for="pol">政治</label>
             <div>
-                <input type="radio" name="pol" checked="checked" value="25">A
-                <input type="radio" name="pol" value="21">B
-                <input type="radio" name="pol" value="17">C
-                <input type="radio" name="pol" value="0">D
+                <input type="radio" name="pol" data-bind="event:{ change:function(data,event){setPol(25)} }" checked="checked">A
+                <input type="radio" name="pol" data-bind="event:{ change:function(data,event){setPol(21)} }">B
+                <input type="radio" name="pol" data-bind="event:{ change:function(data,event){setPol(17)} }">C
+                <input type="radio" name="pol" data-bind="event:{ change:function(data,event){setPol(00)} }">D
             </div>
         </div>
         <div>
             <label for="his">历史</label>
             <div>
-                <input type="radio" name="his" checked="checked" value="25">A
-                <input type="radio" name="his" value="21">B
-                <input type="radio" name="his" value="17">C
-                <input type="radio" name="his" value="0">D
+                <input type="radio" name="his" data-bind="event:{ change:function(data,event){setHis(25)} }" checked="checked">A
+                <input type="radio" name="his" data-bind="event:{ change:function(data,event){setHis(21)} }">B
+                <input type="radio" name="his" data-bind="event:{ change:function(data,event){setHis(17)} }">C
+                <input type="radio" name="his" data-bind="event:{ change:function(data,event){setHis(00)} }">D
             </div>
         </div>
         <div>
             <label for="geo">地理</label>
             <div>
-                <input type="radio" name="geo" checked="checked" value="25">A
-                <input type="radio" name="geo" value="21">B
-                <input type="radio" name="geo" value="17">C
-                <input type="radio" name="geo" value="0">D
+                <input type="radio" name="geo" data-bind="event:{ change:function(data,event){setGeo(25)} }" checked="checked">A
+                <input type="radio" name="geo" data-bind="event:{ change:function(data,event){setGeo(21)} }">B
+                <input type="radio" name="geo" data-bind="event:{ change:function(data,event){setGeo(17)} }">C
+                <input type="radio" name="geo" data-bind="event:{ change:function(data,event){setGeo(00)} }">D
             </div>
         </div>
     </div>

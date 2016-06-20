@@ -13,7 +13,19 @@ function CalcViewModel() {
 
     self.calcs2 = function () {
         return 10;
-    }
+    };
+
+    self.setPol = function (score) {
+        self.pol(score);
+    };
+
+    self.setHis = function (score) {
+        self.his(score);
+    };
+
+    self.setGeo = function (score) {
+        self.geo(score);
+    };
 
     //computed
     self.finalScore = ko.computed(function () {
