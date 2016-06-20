@@ -1,16 +1,19 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 
 <head>
     <title>南方科技大学 2016 能测分数转换器</title>
     <meta charset="UTF-8" />
+    <script type="text/javascript" src="knockout-3.4.0.js" defer="defer"></script>
+    <script type="text/javascript" src="calc.js" defer="defer"></script>
 </head>
 
 <body>
     <h1>南方科技大学 2016 能测分数转换器</h1>
+    <h2>正在编写逻辑，目前仅供预览</h2>
     <div>
         <label for="ncee">高考分数</label>
-        <input type="text" id="ncee" />
+        <input type="text" id="ncee" data-bind="value: ncee"/>
     </div>
     <div>
         <label for="cbt">机考分数</label>
@@ -25,29 +28,31 @@
         <div>
             <label for="pol">政治</label>
             <div>
-                <input type="radio">A</input>
-                <input type="radio">B</input>
-                <input type="radio">C</input>
+                <input type="radio">A
+                <input type="radio">B
+                <input type="radio">C
+                <input type="radio">D
             </div>
         </div>
         <div>
             <label for="his">历史</label>
             <div>
-                <input type="radio">A</input>
-                <input type="radio">B</input>
-                <input type="radio">C</input>
+                <input type="radio">A
+                <input type="radio">B
+                <input type="radio">C
+                <input type="radio">D
             </div>
         </div>
         <div>
             <label for="geo">地理</label>
             <div>
-                <input type="radio">A</input>
-                <input type="radio">B</input>
-                <input type="radio">C</input>
+                <input type="radio">A
+                <input type="radio">B
+                <input type="radio">C
+                <input type="radio">D
             </div>
         </div>
     </div>
-    <h2>您的最终分数是: <span></span></h2>
+    <h2>您的最终分数是: <span data-bind="text: finalScore"></span></h2>
 </body>
-
 </html>
