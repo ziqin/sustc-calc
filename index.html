@@ -4,55 +4,98 @@
 <head>
     <title>南方科技大学 2016 能测分数转换器</title>
     <meta charset="UTF-8" />
-    <script type="text/javascript" src="knockout-3.4.0.js" defer="defer"></script>
-    <script type="text/javascript" src="calc.js" defer="defer"></script>
+    <script defer type="text/javascript" src="knockout-3.4.0.js"></script>
+    <script defer type="text/javascript" src="calc.js"></script>
+    <link rel="stylesheet" href="mdl/material.min.css" />
+    <link rel="stylesheet" href="https://fonts.lug.ustc.edu.cn/icon?family=Material+Icons">
+    <script defer type="text/javascript" src="mdl/material.min.js"></script>
 </head>
 
 <body>
-    <h1>南方科技大学 2016 能测分数转换器</h1>
-    <h2>正在编写逻辑，目前仅供预览</h2>
-    <div>
-        <label for="ncee">高考分数</label>
-        <input type="text" id="ncee" data-bind="value: ncee" />
-    </div>
-    <div>
-        <label for="cbt">机考分数</label>
-        <input type="text" id="cbt" data-bind="value: cbt" />
-    </div>
-    <div>
-        <label for="inv">面试分数</label>
-        <input type="text" id="inv" data-bind="value: inv" />
-    </div>
-    <div>
-        <h4>学业水平测试</h4>
-        <div>
-            <label for="pol">政治</label>
-            <div>
-                <input type="radio" name="pol" data-bind="event:{ change:function(data,event){setPol(25)} }" checked="checked">A
-                <input type="radio" name="pol" data-bind="event:{ change:function(data,event){setPol(21)} }">B
-                <input type="radio" name="pol" data-bind="event:{ change:function(data,event){setPol(17)} }">C
-                <input type="radio" name="pol" data-bind="event:{ change:function(data,event){setPol(00)} }">D
-            </div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+        <h2>南方科技大学 2016 能测分数转换器</h2>
+        <h4>正在编写相关功能，目前仅供预览</h4>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="ncee" data-bind="value: ncee" />
+            <label class="mdl-textfield__label" for="ncee">高考分数</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="cbt" data-bind="value: cbt" />
+            <label class="mdl-textfield__label" for="cbt">机考分数</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="inv" data-bind="value: inv" />
+            <label class="mdl-textfield__label" for="inv">面试分数</label>
         </div>
         <div>
-            <label for="his">历史</label>
+            <h4>学业水平测试</h4>
             <div>
-                <input type="radio" name="his" data-bind="event:{ change:function(data,event){setHis(25)} }" checked="checked">A
-                <input type="radio" name="his" data-bind="event:{ change:function(data,event){setHis(21)} }">B
-                <input type="radio" name="his" data-bind="event:{ change:function(data,event){setHis(17)} }">C
-                <input type="radio" name="his" data-bind="event:{ change:function(data,event){setHis(00)} }">D
+                <label for="pol">政治</label>
+                <div>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                        <input type="radio" class="mdl-radio__button" name="pol" data-bind="event:{ change:function(data,event){setPol(25)} }" checked>
+                        <span class="mdl-radio__label">A&nbsp;</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                        <input type="radio" class="mdl-radio__button" name="pol" data-bind="event:{ change:function(data,event){setPol(21)} }">
+                        <span class="mdl-radio__label">B&nbsp;</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                        <input type="radio" class="mdl-radio__button" name="pol" data-bind="event:{ change:function(data,event){setPol(17)} }">
+                        <span class="mdl-radio__label">C&nbsp;</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                        <input type="radio" class="mdl-radio__button" name="pol" data-bind="event:{ change:function(data,event){setPol(00)} }">
+                        <span class="mdl-radio__label">D&nbsp;</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label for="his">历史</label>
+                <div>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                        <input type="radio" class="mdl-radio__button" name="his" data-bind="event:{ change:function(data,event){setHis(25)} }" checked>
+                        <span class="mdl-radio__label">A&nbsp;</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                        <input type="radio" class="mdl-radio__button" name="his" data-bind="event:{ change:function(data,event){setHis(21)} }">
+                        <span class="mdl-radio__label">B&nbsp;</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                        <input type="radio" class="mdl-radio__button" name="his" data-bind="event:{ change:function(data,event){setHis(17)} }">
+                        <span class="mdl-radio__label">C&nbsp;</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                        <input type="radio" class="mdl-radio__button" name="his" data-bind="event:{ change:function(data,event){setHis(00)} }">
+                        <span class="mdl-radio__label">D&nbsp;</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label for="geo">地理</label>
+                <div>
+                    <div>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                            <input type="radio" class="mdl-radio__button" name="geo" data-bind="event:{ change:function(data,event){setGeo(25)} }" checked>
+                            <span class="mdl-radio__label">A&nbsp;</span>
+                        </label>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                            <input type="radio" class="mdl-radio__button" name="geo" data-bind="event:{ change:function(data,event){setGeo(21)} }">
+                            <span class="mdl-radio__label">B&nbsp;</span>
+                        </label>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                            <input type="radio" class="mdl-radio__button" name="geo" data-bind="event:{ change:function(data,event){setGeo(17)} }">
+                            <span class="mdl-radio__label">C&nbsp;</span>
+                        </label>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                            <input type="radio" class="mdl-radio__button" name="geo" data-bind="event:{ change:function(data,event){setGeo(00)} }">
+                            <span class="mdl-radio__label">D&nbsp;</span>
+                        </label>
+                    </div>
+                </div>
             </div>
         </div>
-        <div>
-            <label for="geo">地理</label>
-            <div>
-                <input type="radio" name="geo" data-bind="event:{ change:function(data,event){setGeo(25)} }" checked="checked">A
-                <input type="radio" name="geo" data-bind="event:{ change:function(data,event){setGeo(21)} }">B
-                <input type="radio" name="geo" data-bind="event:{ change:function(data,event){setGeo(17)} }">C
-                <input type="radio" name="geo" data-bind="event:{ change:function(data,event){setGeo(00)} }">D
-            </div>
-        </div>
+        <h3>您的最终分数是: <span data-bind="text: finalScore"></span></h3>
     </div>
-    <h2>您的最终分数是: <span data-bind="text: finalScore"></span></h2>
 </body>
 </html>

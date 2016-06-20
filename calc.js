@@ -3,9 +3,9 @@ function CalcViewModel() {
     var self = this;
 
     //data
-    self.ncee = ko.observable(580);
-    self.cbt = ko.observable(70);
-    self.inv = ko.observable(5);
+    self.ncee = ko.observable();
+    self.cbt = ko.observable();
+    self.inv = ko.observable();
 
     self.pol = ko.observable(25);
     self.his = ko.observable(25);
