@@ -1,1 +1,0 @@
-# sustc-calc
