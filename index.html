@@ -2,14 +2,14 @@
 <html lang="zh-CN">
 
 <head>
-    <title>南方科技大学 2016 能测分数转换器</title>
     <meta charset="UTF-8" />
+    <title>南方科技大学 2016 能测分数转换器</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer type="text/javascript" src="knockout-3.4.0.js"></script>
-    <script defer type="text/javascript" src="calc.js"></script>
     <link rel="stylesheet" href="mdl/material.min.css" />
-    <link rel="stylesheet" href="https://fonts.lug.ustc.edu.cn/icon?family=Material+Icons">
-    <script defer type="text/javascript" src="mdl/material.min.js"></script>
+    <style type="text/css">
+        .mdl-radio__label { margin-right: 2em; }
+        .mdl-textfield { margin-right: 1em; width: 150px}
+    </style>
 </head>
 
 <body>
@@ -42,19 +42,19 @@
                         <div>
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                 <input type="radio" class="mdl-radio__button" name="pol" data-bind="event:{ change:function(data,event){setPol(25)} }" checked>
-                                <span class="mdl-radio__label">A&nbsp;</span>
+                                <span class="mdl-radio__label">A</span>
                             </label>
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                 <input type="radio" class="mdl-radio__button" name="pol" data-bind="event:{ change:function(data,event){setPol(21)} }">
-                                <span class="mdl-radio__label">B&nbsp;</span>
+                                <span class="mdl-radio__label">B</span>
                             </label>
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                 <input type="radio" class="mdl-radio__button" name="pol" data-bind="event:{ change:function(data,event){setPol(17)} }">
-                                <span class="mdl-radio__label">C&nbsp;</span>
+                                <span class="mdl-radio__label">C</span>
                             </label>
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                 <input type="radio" class="mdl-radio__button" name="pol" data-bind="event:{ change:function(data,event){setPol(00)} }">
-                                <span class="mdl-radio__label">D&nbsp;</span>
+                                <span class="mdl-radio__label">D</span>
                             </label>
                         </div>
                     </div>
@@ -63,19 +63,19 @@
                         <div>
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                 <input type="radio" class="mdl-radio__button" name="his" data-bind="event:{ change:function(data,event){setHis(25)} }" checked>
-                                <span class="mdl-radio__label">A&nbsp;</span>
+                                <span class="mdl-radio__label">A</span>
                             </label>
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                 <input type="radio" class="mdl-radio__button" name="his" data-bind="event:{ change:function(data,event){setHis(21)} }">
-                                <span class="mdl-radio__label">B&nbsp;</span>
+                                <span class="mdl-radio__label">B</span>
                             </label>
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                 <input type="radio" class="mdl-radio__button" name="his" data-bind="event:{ change:function(data,event){setHis(17)} }">
-                                <span class="mdl-radio__label">C&nbsp;</span>
+                                <span class="mdl-radio__label">C</span>
                             </label>
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                 <input type="radio" class="mdl-radio__button" name="his" data-bind="event:{ change:function(data,event){setHis(00)} }">
-                                <span class="mdl-radio__label">D&nbsp;</span>
+                                <span class="mdl-radio__label">D</span>
                             </label>
                         </div>
                     </div>
@@ -85,19 +85,19 @@
                             <div>
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                     <input type="radio" class="mdl-radio__button" name="geo" data-bind="event:{ change:function(data,event){setGeo(25)} }" checked>
-                                    <span class="mdl-radio__label">A&nbsp;</span>
+                                    <span class="mdl-radio__label">A</span>
                                 </label>
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                     <input type="radio" class="mdl-radio__button" name="geo" data-bind="event:{ change:function(data,event){setGeo(21)} }">
-                                    <span class="mdl-radio__label">B&nbsp;</span>
+                                    <span class="mdl-radio__label">B</span>
                                 </label>
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                     <input type="radio" class="mdl-radio__button" name="geo" data-bind="event:{ change:function(data,event){setGeo(17)} }">
-                                    <span class="mdl-radio__label">C&nbsp;</span>
+                                    <span class="mdl-radio__label">C</span>
                                 </label>
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                     <input type="radio" class="mdl-radio__button" name="geo" data-bind="event:{ change:function(data,event){setGeo(00)} }">
-                                    <span class="mdl-radio__label">D&nbsp;</span>
+                                    <span class="mdl-radio__label">D</span>
                                 </label>
                             </div>
                         </div>
@@ -107,5 +107,8 @@
             </div>
         </main>
     </div>
+    <script type="text/javascript" src="knockout-3.4.0.js"></script>
+    <script type="text/javascript" src="calc.js"></script>
+    <script type="text/javascript" src="mdl/material.min.js"></script>
 </body>
 </html>

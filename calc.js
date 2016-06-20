@@ -11,10 +11,6 @@ function CalcViewModel() {
     self.his = ko.observable(25);
     self.geo = ko.observable(25);
 
-    self.calcs2 = function () {
-        return 10;
-    };
-
     self.setPol = function (score) {
         self.pol(score);
     };
@@ -35,6 +31,7 @@ function CalcViewModel() {
                Number(self.cbt()) * 25 / 100 +
                Number(self.inv()) +
                s2t / 7.5;
+
         return result.toFixed(2);
     }, self);
 }
