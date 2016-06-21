@@ -32,7 +32,7 @@
                     <span class="mdl-textfield__error">请输入正确的机考分数</span>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="inv" data-bind="textInput: inv" pattern="[0-5]|[0-4]\.\d{0,}|5\.0{0,}" />
+                    <input class="mdl-textfield__input" type="number" id="inv" data-bind="textInput: inv" max="5" min="0" step="0.01" />
                     <label class="mdl-textfield__label" for="inv">面试分数（满分5）</label>
                     <span class="mdl-textfield__error">请输入正确的面试分数</span>
                 </div>
